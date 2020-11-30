@@ -1,6 +1,11 @@
 <nav>
     <ul>
       <li> Home </li>
-
+        <% if !user_signed_in? %>
+          <li> Sign Up </li>
+          <li> Login </li>
+        <% else %>
+          <li> Logout </li> 
+        <% end %>
     </ul>
 </nav>
