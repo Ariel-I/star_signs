@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_011618) do
+ActiveRecord::Schema.define(version: 2020_12_01_201238) do
+
+  create_table "constellations", force: :cascade do |t|
+    t.string "name"
+    t.string "symbol"
+    t.string "element"
+    t.string "ruling_planet"
+    t.string "zodiac_quality"
+    t.string "start_date"
+    t.string "end_date"
+  end
+
+  create_table "traits", force: :cascade do |t|
+    t.string "strengths"
+    t.string "weaknesses"
+    t.string "compatibal_signs"
+    t.integer "user_id"
+    t.integer "constellation_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
