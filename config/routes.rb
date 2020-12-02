@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     get 'login', to: 'devise/sessions#new', as: 'login'
     get 'signup', to: 'devise/registrations#new', as: 'signup'
   end 
-  
+
   resources :constellations, only: [:index, :new, :create, :show]
   resources :traits, only: [:show]
-#  get '/constellation', to: 'constellations#show', as: 'profile'
+  
 end

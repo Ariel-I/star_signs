@@ -4,6 +4,7 @@ class CreateTraits < ActiveRecord::Migration[6.0]
       t.string :strengths
       t.string :weaknesses
       t.string :compatibal_signs
+      t.string :description
       t.integer :user_id
       t.integer :constellation_id
     end

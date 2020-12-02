@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_201238) do
     t.string "strengths"
     t.string "weaknesses"
     t.string "compatibal_signs"
+    t.string "description"
     t.integer "user_id"
     t.integer "constellation_id"
   end
