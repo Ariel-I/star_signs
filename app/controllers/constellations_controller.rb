@@ -1,25 +1,23 @@
 class ConstellationsController < ApplicationController
 
     def index
-      @constellations = Constellation.all 
+      @constellations = Constellation.all
     end 
 
     def new
-      @constellation = Constellation.new(constellation_params)
     end 
 
     def create
-       # binding.pry
-      @constellation = Constellation.new(constellation_params)
-      @constellation.save   
+      @constellation = Constellation.new
+      if @constellation.save
+        redirect_to constellations_path
+      else 
+        redirect_to root_path
+      end
     end 
 
     def show
       @constellation = Constellation.find_by(id: params[:id])
-    end 
-
-    def destroy
-     Constellation.find_by(id: params[:id]).destroy
     end 
 
     private
