@@ -9,7 +9,7 @@ class ConstellationsController < ApplicationController
     end 
 
     def create
-        binding.pry
+       # binding.pry
       @constellation = Constellation.new(constellation_params)
       @constellation.save   
     end 

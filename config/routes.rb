@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   end 
   
   resources :constellations, only: [:index, :new, :create, :show]
-  get '/constellation', to: 'constellations#show', as: 'profile'
+  resources :traits, only: [:show]
+#  get '/constellation', to: 'constellations#show', as: 'profile'
 end
